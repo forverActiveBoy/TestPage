@@ -49,7 +49,7 @@
     <orderEntry type="module-library">
       <library name="Maven: com.alibaba:jconsole:1.8.0">
         <CLASSES>
-          <root url="jar://F:/devSoft/JAVA/JDK/lib/jconsole.jar!/" />
+          <root url="jar://G:/JAVA/JDK/lib/jconsole.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -58,7 +58,7 @@
     <orderEntry type="module-library">
       <library name="Maven: com.alibaba:tools:1.8.0">
         <CLASSES>
-          <root url="jar://F:/devSoft/JAVA/JDK/lib/tools.jar!/" />
+          <root url="jar://G:/JAVA/JDK/lib/tools.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -80,5 +80,8 @@
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-core:2.8.8" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.8.8" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.8.8" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.shiro:shiro-core:1.2.3" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.shiro:shiro-spring:1.2.3" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.shiro:shiro-web:1.2.3" level="project" />
   </component>
 </module>

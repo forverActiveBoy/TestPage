@@ -31,6 +31,27 @@
     <url-pattern>/*</url-pattern>
   </filter-mapping>
 
+  <!--shiro的过滤器配置-->
+  <filter>
+    <filter-name>shiroFilter</filter-name>
+    <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+    <init-param>
+      <param-name>targetBeanName</param-name>
+      <!--这个标签的值一定要与spring-shiro配置文件中bean标签的 id名字 -->
+      <param-value>shiroFilter</param-value>
+    </init-param>
+    <!-- filter的生命周期  将目标filter的生命周期交于tomcat管理 -->
+    <init-param>
+      <param-name>targetFilterLifecycle</param-name>
+      <param-value>true</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>shiroFilter</filter-name>
+    <!--过滤所有请求 -->
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+
 
   <!-- 配置监听器 -->
   <listener>
