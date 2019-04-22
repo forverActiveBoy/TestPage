@@ -3,6 +3,7 @@ import java.util.List;
 import com.alibaba.dao.AdminDao;
 import com.alibaba.entity.Admin;
 import com.alibaba.service.AdminService;
+import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -32,6 +33,7 @@ public class AdminServiceImpl implements AdminService{
     public int insertAdmin(Admin value){
         return adminDao.insertAdmin(value);
     }
+    @RequiresPermissions({"user:create"})
     @Override
     public int insertNonEmptyAdmin(Admin value){
         return adminDao.insertNonEmptyAdmin(value);
