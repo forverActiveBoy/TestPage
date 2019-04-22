@@ -52,4 +52,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		<!--指定加密次数-->
 		<property name="hashIterations" value="1024"></property>
 	</bean>
+	<!--开启shiro注解功能-->
+	<bean id = "authorizationAttributeSourceAdvisor" class="org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor">
+		<property name="securityManager" ref="securityManager"></property>
+	</bean>
 </beans>
