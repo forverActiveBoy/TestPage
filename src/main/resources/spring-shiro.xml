@@ -39,11 +39,26 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	<bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">
 		<!--将Realm注入安全管理器-->
 		<property name="realm" ref="myRealm"></property>
+		<!--将缓存管理器注入到安全管理器-->
+		<property name="cacheManager" ref="cacheManager"></property>
 	</bean>
 	<!--自定义realm-->
 	<bean id="myRealm" class="com.alibaba.realm.MyRealm">
 		<!--更换凭证匹配器-->
 		<property name="credentialsMatcher" ref="credentialsMatcher"></property>
+		<!--开启认证缓存-->
+		<property name="authenticationCachingEnabled" value="true"></property>
+		<!--指定认证缓存空间-->
+		<property name="authenticationCacheName" value="authenticationCache"></property>
+		<!--开启授权缓存-->
+		<property name="authorizationCachingEnabled" value="true"></property>
+		<!--指定授权缓存空间-->
+		<property name="authorizationCacheName"  value="authorizationCache"></property>
+	</bean>
+
+	<!--加载ehcache的配置文件-->
+	<bean id="cacheManager" class="org.apache.shiro.cache.ehcache.EhCacheManager">
+		<property name="cacheManagerConfigFile" value="classpath:ehcache.xml"></property>
 	</bean>
 	<!--加密凭证匹配器-->
 	<bean id="credentialsMatcher" class="org.apache.shiro.authc.credential.HashedCredentialsMatcher">

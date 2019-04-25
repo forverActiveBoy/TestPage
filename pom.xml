@@ -117,11 +117,6 @@
       <version>1.2.16</version>
     </dependency>
     <dependency>
-      <groupId>org.slf4j</groupId>
-      <artifactId>slf4j-log4j12</artifactId>
-      <version>1.7.7</version>
-    </dependency>
-    <dependency>
       <groupId>com.alibaba</groupId>
       <artifactId>fastjson</artifactId>
       <version>1.2.16</version>
@@ -205,12 +200,24 @@
       <artifactId>shiro-web</artifactId>
       <version>1.2.3</version>
     </dependency>
-<!--    &lt;!&ndash; https://mvnrepository.com/artifact/org.apache.shiro/shiro-ehcache &ndash;&gt;
+   <!-- ehcache依赖slf4j-->
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-log4j12</artifactId>
+      <version>1.7.7</version>
+    </dependency>
+   <!-- ehcache相关依赖-->
+    <dependency>
+      <groupId>net.sf.ehcache</groupId>
+      <artifactId>ehcache</artifactId>
+      <version>2.10.4</version>
+    </dependency>
+    <!--shiro的缓存用ehcache实现-->
     <dependency>
       <groupId>org.apache.shiro</groupId>
       <artifactId>shiro-ehcache</artifactId>
       <version>1.2.3</version>
-    </dependency>-->
+    </dependency>
 
   </dependencies>
 
